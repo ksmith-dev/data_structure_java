@@ -3,6 +3,13 @@ public class Application
 
     public static void main(String[] args)
     {
+        //testTree();
+        //testStack();
+        testLinkList();
+
+    }
+
+    private static void testTree() {
         Tree tree = new Tree("apple");
 
         tree.insert("banana");
@@ -34,5 +41,37 @@ public class Application
         System.out.println("---------------PRE----------------");
 
         tree.printPreOrder();
+    }
+
+    private static void testStack() {
+        Stack stack = new Stack();
+
+        stack.push("one");
+        stack.push("two");
+        stack.push("three");
+        stack.push("four");
+        stack.push("five");
+
+        System.out.println(stack.pop());
+        System.out.println(stack.pop());
+        System.out.println(stack.pop());
+        System.out.println(stack.pop());
+        System.out.println(stack.pop());
+        System.out.println(stack.pop());
+    }
+
+    private static void testLinkList() {
+        LinkList linkList = new LinkList("one");
+
+        linkList.push("two");
+        linkList.push("three");
+        linkList.push("four");
+
+        System.out.println(linkList.getHead());
+
+        System.out.println(linkList.remove("two"));
+        System.out.println(linkList.contains("two"));
+
+        System.out.println(linkList.contains("four"));
     }
 }
